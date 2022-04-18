@@ -49,8 +49,8 @@
    
   ㅇ cookie 메소드
    - 1. int getMaxAge() : 쿠키의 최대지속시간 설정, 초단위 / -1일시 브라우저 종료되면 쿠키도 만료
-   - 2. String getName() : 쿠키의 이름을 string으로 변환
-   - 3. String getValue() : 쿠키의 값을 변환
+   - 2. String getName() : 쿠키의 이름을 string으로 변환 ****
+   - 3. String getValue() : 쿠키의 값을 변환. ****
    - 4. void setMaxAge(int expiry) : 만료시간(유효기간) 설정
    - 5. void setValue(String newValue) : 쿠키에 새로운 값을 설정함
    
@@ -61,7 +61,13 @@
  response.addCookie(cookie)
    
    
-   
-   
+ ㅁ 쿠키조회
+ 
+  COokie[] cookies = request.getCookies();
+  
+  for( Cookie c : cookies){
+    out.println(c.getName());
+    out.println(c.getValue());
+  }
    
    
