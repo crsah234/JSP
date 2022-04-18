@@ -26,3 +26,42 @@
    
    
     
+
+2.1 쿠키 클래스
+ ㅁ 쿠키 정의
+  - 서버에서 정보가 사용자의 컴퓨터로 저장되는것 . 다음에 웹 페이지에 접속시 이정보가 브라우저에서 서버로 전송될 수 있다
+  - name, value 값을 가짐
+  
+  ㅇ 쿠키 생성
+   - 1. 쿠키객체 생성 
+    Cookie cookie = new Cookie("name","value")
+   - 2. 내장객체 response의 addCookie()를 이용
+    response.addCookie(cookie);
+   - 3. 클라이언트에게 쿠키를 전송 및 저장.
+  
+  ㅇ 컴퓨터에 저장된 쿠키
+   - request의 getCookies()이용 / 모두 서버로 전달하여 조회가능
+    Cookie []cookies = request.getCookies();
+    
+  ㅇ 쿠키의 제한 - 수, 크기
+   - 수 : 각각의 웹사이트당 20개, 총 300개
+   - 크기 : 개당 4k byte, 총 1.2m byte
+   
+  ㅇ cookie 메소드
+   - 1. int getMaxAge() : 쿠키의 최대지속시간 설정, 초단위 / -1일시 브라우저 종료되면 쿠키도 만료
+   - 2. String getName() : 쿠키의 이름을 string으로 변환
+   - 3. String getValue() : 쿠키의 값을 변환
+   - 4. void setMaxAge(int expiry) : 만료시간(유효기간) 설정
+   - 5. void setValue(String newValue) : 쿠키에 새로운 값을 설정함
+   
+   
+ ㅁ 쿠키 추가 및 유효기간 설정 / 컴퓨터에 저장
+ Cookie cookie = new Cookie("user","king);
+ cookie.setMaxAge(2*60);
+ response.addCookie(cookie)
+   
+   
+   
+   
+   
+   
