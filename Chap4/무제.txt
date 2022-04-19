@@ -1,1 +1,17 @@
-As dads
+태그의 이용
+
+ - 지시어  : <%@ %>    : jsp 페이지의 속성을 지정
+ - 선언 : <%! %>      :  소속변수 선언, 메소드 정의
+ - 표현식 : <%= %>     : 결과값 호출
+ - 스크립트릿 : <% %>    : 자바 코드를 기술
+ - 주석 ㅣ <%-- --%>
+ 
+ 
+ 
+ 액션태그
+ 1. <jsp : include page="test.jsp"/> : 현재 jsp 페이지에서 다른 페이지를 '포함'
+ 2. <jsp : forward page ="test.jsp"/> : 현재 jsp페이지의 '제어를' 다른페이지 에 전달
+ 3. <jsp:plugin type = "applet" code=  "test"/> 자바 애플릿을 플러그인
+ 4. <jsp:useBean id="login" class="LoginBean"/> : 자바빈을 사용
+ 
+ 
