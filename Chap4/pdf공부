@@ -52,4 +52,67 @@
  - launguage, contentType, pageEncoding등 지정
  - 한번에 여러개의 속성 지정
  
-ㅁ
+ㅇ launguage 속성
+ - 표현식, 선언, 스크립트릿 언어의 종류를 지정하는 속성
+ - <%@ page language="java"%>
+ 
+ㅇ contentType 속성 
+ - jsp페이지의 MIME(multipurpose internet mail extension) 유형 지정속성
+ - 지정없을시 text/html이 기본값
+ - jsp페이지 자료를 네트웍에서 주고받는 문서의 타입을 정의함, 원활하게 하려고.
+ 
+ㅇ pageEnconding 속성
+ - 문자 인코딩 방식을 기술
+ - 기본값 : ISO-8859-1
+ - 한글 : euc-kr
+ 
+ㅇ info 속성
+ - 전체에 대한 설명, 버전, 작성자, 작성일자 등등 문자열로
+ 
+ㅇ isErrorPage 속성
+ - 이페이지가 오류를 처리하는 페이지인지 true, false로 지정
+ - true일시 내장객체,exception 변수를 사용하여 에러 처리
+ 
+ㅇ errorPage 속성
+ - JSP 페이지에서 발생한 오류를 처리하는 JSP 페이지를 기술하는 방법
+ - 오류를 처리하는 전담 페이지를 지정.
+ - 이 시스템을 사용하는 사용자에게 일관성 있게 오류처리를 할 수 있음 -> 신뢰성 높일 수 있다
+
+ㅇ isThreadSafe
+ - 동시 사용자 접속 처리에 대한 지정방법
+ 
+ㅇ isELIgnored
+ - 표현언어인 EL(Expression Language) 의 사용여부 지정
+ - false가 기본값 - 사용한다는 의미.
+ 
+ㅇ buffer
+ - 출력 버퍼링 메모리의 크기를 지정하는 방법
+ - 기본값은 8kb
+ - none or 16kb같이 다른 크기의 값으로 지정 가능
+ 
+ㅇ 버퍼링
+ - 일반적으로, 입력이나 출력에 이용하는 방식
+ - 프로세스 처리속도보다는 입출력의 속도가 느리기에 모아서 처리함
+ - none 일시 버퍼링을 하지 않고 바로 웹 브라우저에 출력한다는 뜻
+
+ㅇ autoFlush
+ - 버퍼가 모두 찼을때 자동으로 출력하는지 지정
+ - true가 기본값
+ - false일시 버퍼 크기만큼 차기전에 수동으로 비워야 출력가능
+ - 버퍼크기의 자료가 모두 찼을 경우, 오버플로우 예외발생 
+
+ buffer/autoflush 주의점
+  - autoFlush가 None이어야 수동 플러쉬를 한다는 것인데, buffer를 none으로하면 버퍼링을 하지 않겠다는 말임.
+  
+ㅇ session 속성
+ - 세션을 사용하는지 지정
+ - true가 기본값
+ 
+ 
+ㅁ include 지시자 관련
+ㅇ file 속성
+ - 파일을 삽입하는데 지정.
+
+
+
+
