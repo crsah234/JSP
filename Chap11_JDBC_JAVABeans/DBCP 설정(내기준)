@@ -22,3 +22,6 @@
     
     
 3. WebContent/WEB-INF/Context.xml 넣어서 진행하기.
+
+
+주의점 : Datasource가 아닌 DataSource임. 주의하기.
