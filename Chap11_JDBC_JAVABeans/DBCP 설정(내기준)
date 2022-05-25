@@ -1,0 +1,24 @@
+1. server.xml
+
+ <Context docBase="Chap11_JAVABEAN_JDBC" path="/Chap11_JAVABEAN_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:Chap11_JAVABEAN_JDBC">
+      
+      <Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+      username="root" password="gimjiho123" driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost:3306/univdb?autoReconnect=true"/>
+      
+      
+      </Context>
+      
+      
+      
+      
+2. Context.xml
+
+<Resource name="jdbc/mysql" auth="Container"
+		driverClassName="com.mysql.jdbc.Driver" maxActive="100" maxIdle="30"
+		maxWait="10000" password="gimjiho123" type="javax.sql.DataSource"
+		url="jdbc:mysql://localhost:3306/univdb?autoReconnect=true"
+		username="root" />
+    
+    
+3. WebContent/WEB-INF/Context.xml 넣어서 진행하기.
